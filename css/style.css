@@ -59,7 +59,7 @@ nav a:hover{
     background-color: rgb(129, 129, 129);
     -webkit-transform: scale(1.15);
     -ms-transform: scale(1.15);
-    transform: scale(1.15);
+    transform:   scale(1.15);
     transition: all 300ms ease;
     color: white;
 }
@@ -73,7 +73,7 @@ nav a:hover{
     text-align: center;
     align-items: center;
     justify-content: center;
-    color: rgb(31, 31, 31);
+    color: rgb(23, 23, 23);
     font-weight: bold;
     font-family:Verdana, Geneva, Tahoma, sans-serif;    
     font-size: 20px;
@@ -149,25 +149,34 @@ nav a:hover{
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     align-items: center;
-    color: rgb(31, 31, 31);
+    color: rgb(23, 23, 23);
     font-weight: bold;
     font-family:Verdana, Geneva, Tahoma, sans-serif;   
-    justify-content: space-between;
+    justify-content: space-evenly;
+
+    
 }
 
 #indexSection2 h1{
     
     letter-spacing: 2px;
     width: 600px;
-    font-size: 60px;
+    font-size: 62px;
 }
+
+#indexSection2 h2{
+    
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+
 
 #indexSection2 p{
     
     font-weight: normal;
     letter-spacing: 1px;
-    width: 800px;
-    font-size: 23px;
+    width: 500px;
+    font-size: 20px;
     color: rgb(60, 60, 60);
     opacity: 90%;
     padding-top: 50px;
@@ -180,21 +189,49 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    
+}
+
+.product-plug{
+    position: relative;
+    top: 20px;
+}
+
+.product-plug::after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: rgb(255, 49, 49);
+    position: absolute;
+    top: 25px;
 }
 
 
 
+
 #indexSection3{
-    display: grid;
+
     grid-area: section2 section2;
     background-color: rgb(255, 124, 124);
+    display: flex;
+    align-items: stretch;
+}
 
-    
-    text-align: center;
+.index-product-card{
+    width: 100%;
+    height: 200px;
+    display: flex;
     align-items: center;
-    color: white;
-    font-weight: bold;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;    
-    font-size: 20px;
+    justify-content: center;
+    background-color: rgb(96, 67, 67);
+    top: 25px;
+    margin: 10px;
+
+}
+
+.index-card-row{
+    width: 50%;
+    margin: 25px;
+    top: 25px;
 }
