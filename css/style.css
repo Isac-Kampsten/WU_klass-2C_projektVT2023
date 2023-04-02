@@ -6,29 +6,54 @@
 
 
 #indexContainer{
-    width: 100%;
+    width: 100vw;
     height: 260vh;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 1fr 1fr;
+    grid-template-rows: 4.5% 1fr 1fr;
     grid-template-areas:
         "header header"
         "section1 section1"
         "section2 section2";
 }
 
-.mainHeaders{
+#shopContainer{
+    width: 100%;
+    height: 100vh;
+
     display: grid;
+    grid-template-rows: 11% 1fr;
+    grid-template-areas: 
+        "header"
+        "shopSection";
+}
+
+#om-oss-container{
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 11% 1fr;
+    grid-template-areas: 
+        "header"
+        "OmOss";
+}
+
+
+
+.mainHeaders{
+    display: flex;
     grid-area: header;
     background-color: white;
 
     
-    justify-content: space-evenly;
+    justify-content: center;
     align-items:center;
 
     
 }
+
 
 nav{
     display: flex;
@@ -36,8 +61,10 @@ nav{
     justify-content: space-evenly;
     
     height: 55px;
-    width: 500px;
-    background-color: rgb(235, 235, 235)
+    width: 40%;
+    background-color: rgb(235, 235, 235);
+    flex-wrap: wrap;
+   
     
 }
 
@@ -48,7 +75,7 @@ nav a{
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-family:Verdana, Geneva, Tahoma, sans-serif;    
-    font-size: 18px;
+    font-size: 1.2rem;
     text-decoration: none;
     width: 120px;
     height: 35px;
@@ -76,17 +103,16 @@ nav a:hover{
     color: rgb(23, 23, 23);
     font-weight: bold;
     font-family:Verdana, Geneva, Tahoma, sans-serif;    
-    font-size: 20px;
+    font-size: 1.4rem;
     
 
 }
 
 #redbullAndSlogan{
-    width: 1150px;
-    height: 750px;
     display:inline-flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #buyLinkContainer{
@@ -95,17 +121,16 @@ nav a:hover{
     align-items: center;
     background-color: rgb(61, 61, 255);
     border-radius: 6px;
-    margin-left: 250px;
-    height: 60px;
-    width: 220px;
+    margin-left: 35%;
+    height: 15%;
+    width: 25%;
 }
 
 #buyLinkContainer a{
     text-decoration: none;
     color: white;
-    width: 220px;
-    height: 55px;
-    padding-top: 14px;
+    height: 50px;
+    padding-top: 5%;
 }
 
 #buyLinkContainer:hover{
@@ -129,16 +154,16 @@ nav a:hover{
 
 
 #redbullAndSlogan h1{
-    padding-left: 110px;
-    padding-bottom: 60px;
+    padding-left: 13%;
+    padding-bottom: 5%;
     text-align: left;
     width: 800px;
-    font-size: 70px
+    font-size: 5rem;
 }
 
 #singleRedbullCan{
-    height: 600px;
-    width: auto;
+    height: 25%;
+    width: 25%;
 
 }
 
@@ -147,7 +172,7 @@ nav a:hover{
     
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 225, 225);
+    background-color: rgb(247, 247, 247);
     align-items: center;
     color: rgb(23, 23, 23);
     font-weight: bold;
@@ -194,7 +219,7 @@ nav a:hover{
 
 .product-plug{
     position: relative;
-    top: 20px;
+    padding-bottom: 40px;
 }
 
 .product-plug::after{
@@ -213,7 +238,7 @@ nav a:hover{
 #indexSection3{
 
     grid-area: section2 section2;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(247, 247, 247);
     display: flex;
     flex-direction:column;
     justify-content: space-evenly;
@@ -238,9 +263,7 @@ nav a:hover{
     width: 100%;
     margin: 0px;
     display: flex;
-    justify-content: space-evenly;
-    
-    
+    justify-content: space-evenly;    
 }
 
 .index-card-image{
@@ -264,4 +287,385 @@ nav a:hover{
     transition: all 300ms ease;
     
     
+}
+
+
+
+
+/* shop page */
+
+
+#shopSection{
+    display: flex;
+    grid-area: shopSection;
+    background-color: rgb(236, 236, 236);
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+}
+
+.shopCard{
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in-out;
+    box-shadow: 1px 7px 13px 5px rgba(0,0,0,0.25);
+}
+
+.shopCard img{
+    width: 100px;
+    height: auto;
+}
+
+.shopCard h3{
+    padding-top: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.shopCard h3::after{
+    display: block;
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: rgb(255, 49, 49);
+    position: relative;
+    top: 4px;
+    border-radius: 2px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.shopCard button{
+    margin-top: 30px;
+    
+    
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 15px;
+    border: 0;
+    color: #fff;
+    font-size: 17.5px;
+    border: 2px solid transparent;
+    border-color: #000;
+    color: #000;
+    background: transparent;
+    font-weight: 800;
+    line-height: 30px;
+    transition: background,color .2s ease-in-out;
+    
+}
+
+.shopCard:hover h3::after{
+    width: 100%;
+    transition: 1s ease-in-out;
+    background: rgb(255, 255, 255);
+}
+
+.shopCard:hover button{
+    border-color: white;
+    color: white;
+}
+.shopCard button:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: black;
+}
+
+#Flavor1:hover{
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform:   scale(1.15);
+    transition: .3s ease-in-out;
+    background-color: rgb(40, 40, 116);
+    color: white;
+    border-radius: 6px;
+}
+
+#Flavor2:hover{
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform:   scale(1.15);
+    transition: .3s ease-in-out;
+    background-color: rgb(0, 138, 203);
+    color: white;
+    border-radius: 6px;
+}
+
+#Flavor3:hover{
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform:   scale(1.15);
+    transition: .3s ease-in-out;
+    background-color: rgb(0, 138, 203);
+    color: white;
+    border-radius: 6px;
+}
+
+#Flavor4:hover{
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform:   scale(1.15);
+    transition: .3s ease-in-out;
+    background-color:  rgb(2, 112, 185);
+    color: white;
+    border-radius: 6px;
+}
+
+#Flavor5:hover{
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform:   scale(1.15);
+    transition: .3s ease-in-out;
+    background-color:  rgb(243, 144, 20);
+    color: white;
+    border-radius: 6px;
+}
+
+#Flavor6:hover{
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform:   scale(1.15);
+    transition: .3s ease-in-out;
+    background-color: rgb(40, 40, 116);
+    color: white;
+    border-radius: 6px;
+}
+#Flavor7:hover{
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform:   scale(1.15);
+    transition: .3s ease-in-out;
+    background-color: rgb(38, 162, 71);
+    color: white;
+    border-radius: 6px;
+    
+}
+
+#Flavor8:hover{
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform:   scale(1.15);
+    transition: .3s ease-in-out;
+    background-color: rgb(224, 61, 49);
+    color: white;
+    border-radius: 6px;
+}
+
+#cart-icon{
+    height: 45px;
+    width: auto;
+    
+}
+
+#cart-number-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    background-color: rgb(255, 92, 92);
+    width: 25px;
+    height: 25px;
+    border-radius: 40px;
+    opacity: 70%;
+}
+
+#cart-value{
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    opacity: 200%;
+}
+
+
+/* Om oss */
+
+#om-oss-container{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#om-oss-section{
+    grid-area: OmOss;
+    display: flex;
+    background-color: rgb(236, 236, 236);
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#om-oss-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+    width: 55%;
+    background-color: #fff;
+    align-items: start;
+    box-shadow: 1px 7px 13px 5px rgba(0,0,0,0.43);
+}
+
+#om-oss-card h1{
+    color: rgb(23, 23, 23);
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;    
+    font-size: 2.5rem;
+    margin: 2%;
+}
+
+#om-oss-card p{
+    padding-left: 3%;
+    font-weight: normal;
+    letter-spacing: 1px;
+    width: 70%;
+    font-size: 1.3rem;
+    color: rgb(60, 60, 60);
+    opacity: 90%;
+    margin-bottom: 3%;
+    
+}
+
+#om-oss-card button{
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 1% 2%;
+    border: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+    border-color: #000;
+    color: #000;
+    background: transparent;
+    font-weight: 800;
+    line-height: 120%;
+    transition: background,color .2s ease-in-out;
+    margin-left: 42%;
+    margin-bottom: 2%;
+    
+}
+
+#om-oss-card button:hover{
+    background-color: #000;
+    color: #fff;
+    border-color: black;
+}
+
+@media screen and (max-width: 600px){
+
+    #om-oss-section p{
+        overflow-y: scroll;
+    }
+
+
+    nav{
+
+        height: 200px;
+    }
+    
+    #om-oss-container{
+        width: 100vw;
+        height: 100vh;
+    
+        display: grid;
+        grid-template-rows: 25% 1fr;
+        grid-template-areas: 
+            "header"
+            "OmOss";
+    }
+
+    #om-oss-card button{
+        margin-left: 20%;
+        margin-top: 10%;
+        
+    }
+
+    #shopContainer{
+        width: 100%;
+        height: 100vh;
+    
+        display: grid;
+        grid-template-rows: 25% 1fr;
+        grid-template-areas: 
+            "header"
+            "shopSection";
+    }
+
+    #redbullAndSlogan h1{
+        padding-left: 5%;
+        padding-bottom: 8%;
+        padding-top: 8%;
+        text-align: center;
+        font-size: 3rem;
+        width: 300px;
+    }
+
+    #indexContainer{
+        width: 100vw;
+        height: 260vh;
+    
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 10% 1fr 1fr 1fr;
+        grid-template-areas:
+            "header"
+            "section1"
+            "section2"
+            "section3";
+    }
+
+    .index-card-row{
+        width: 80%;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-wrap: wrap;  
+        margin-left: 50px; 
+    }
+
+    #redbullAndSlogan{
+        display:inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    #redbullAndSlogan h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #indexSection2 h1{
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    #indexSection2 h2{
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    #indexSection2 p{
+        width: 100%;
+    }
+
+    #buyLinkContainer{
+        width: 200px;
+        margin-left: 50px;
+    }
 }
