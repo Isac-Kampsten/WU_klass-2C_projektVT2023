@@ -5,86 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redbull Products</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
 
   <body>
     <div id="shopContainer">
       <header class="mainHeaders">
         <nav>
-          <a href="shop.html">Produkter</a>
-          <a href="index.html">Hem</a>
-          <a href="om_oss.html">Om Oss</a>
+          <a href="/shop.html">Produkter</a>
+          <a href="/index.html">Hem</a>
+          <a href="/om_oss.html">Om Oss</a>
         </nav>
         <div id="cart-number-div">
           <span id="cart-value">0</span>
         </div>
-        <img id="cart-icon" src="img/cart-icno.png" alt="" />
+        <img id="cart-icon" src="/img/cart-icno.png" alt="cart icon" />
+        <button id="openBasket">Se varukorg</button>
       </header>
 
       <section id="shopSection">
         <div id="Flavor1" class="shopCard">
-          <img src="img/redbullCanSingle.png" alt="" />
+          <img src="/img/redbullCanSingle.png" alt="can of redbull" />
           <h3>Redbull Orginal</h3>
-          <button onclick="incrementCartNumber()" class="basket-add-btn">
-            Lägg till
-          </button>
+          <button class="basket-add-btn">Lägg till</button>
         </div>
         <div id="Flavor2" class="shopCard">
-          <img src="img/redbullCanSingleJuneberry.png" alt="" />
+          <img src="/img/redbullCanSingleJuneberry.png" alt="can of redbull" />
           <h3>Redbull Juneberry</h3>
-          <button onclick="incrementCartNumber()" class="basket-add-btn">
-            Lägg till
-          </button>
+          <button class="basket-add-btn">Lägg till</button>
         </div>
         <div id="Flavor3" class="shopCard">
-          <img src="img/redbullCanSingleSugarfree.png" alt="" />
+          <img src="/img/redbullCanSingleSugarfree.png" alt="can of redbull" />
           <h3>Redbull Sugarfree</h3>
-          <button onclick="incrementCartNumber()" class="basket-add-btn">
-            Lägg till
-          </button>
+          <button class="basket-add-btn">Lägg till</button>
         </div>
         <div id="Flavor4" class="shopCard">
-          <img src="img/redbullCanSingleKokos.png" alt="" />
+          <img src="/img/redbullCanSingleKokos.png" alt="can of redbull" />
           <h3>Redbull Kokos-Blåbär</h3>
-          <button onclick="incrementCartNumber()" class="basket-add-btn">
-            Lägg till
-          </button>
+          <button class="basket-add-btn">Lägg till</button>
         </div>
         <div id="Flavor5" class="shopCard">
-          <img src="img/redbullCanSingleAprikos.png" alt="" />
+          <img src="/img/redbullCanSingleAprikos.png" alt="can of redbull" />
           <h3>Redbull Aprikos</h3>
-          <button onclick="incrementCartNumber()" class="basket-add-btn">
-            Lägg till
-          </button>
+          <button class="basket-add-btn">Lägg till</button>
         </div>
         <div id="Flavor6" class="shopCard">
-          <img src="img/redbullCanSingleBlueberry.png" alt="" />
+          <img src="/img/redbullCanSingleBlueberry.png" alt="can of redbull" />
           <h3>Redbull Blåbär</h3>
-          <button onclick="incrementCartNumber()" class="basket-add-btn">
-            Lägg till
-          </button>
+          <button class="basket-add-btn">Lägg till</button>
         </div>
         <div id="Flavor7" class="shopCard">
-          <img src="img/redbullCanSingleCactus.png" alt="" />
+          <img src="/img/redbullCanSingleCactus.png" alt="can of redbull" />
           <h3>Redbull Kaktus</h3>
-          <button onclick="incrementCartNumber()" class="basket-add-btn">
-            Lägg till
-          </button>
+          <button class="basket-add-btn">Lägg till</button>
         </div>
         <div id="Flavor8" class="shopCard">
           <img
-            src="img/redbullCanSingleWatermelon.png
+            src="/img/redbullCanSingleWatermelon.png
         "
-            alt=""
+            alt="can of redbull"
           />
           <h3>Redbull Vattenmelon</h3>
-          <button onclick="incrementCartNumber()" class="basket-add-btn">
-            Lägg till
-          </button>
+          <button class="basket-add-btn">Lägg till</button>
+        </div>
+
+        <div class="popup" id="checkoutPopup">
+          <div id="popup-left">
+            <span>Flavor x: 0</span>
+            <span>Flavor x: 0</span>
+            <span>Flavor x: 0</span>
+            <span>Flavor x: 0</span>
+            <span>Flavor x: 0</span>
+            <span>Flavor x: 0</span>
+            <span>Flavor x: 0</span>
+            <span>Flavor x: 0</span>
+          </div>
+          <div id="popup-right">
+            <div id="buy-form">
+              <form>
+                <label for="fname">Förnamn:</label><br />
+                <input type="text" name="Förnamn" /><br />
+                <label for="lname">Efternamn:</label><br />
+                <input type="text" name="Efternamn" /><br />
+                <label for="address">Adress:</label><br />
+                <input type="text" name="Address" />
+              </form>
+
+              <button id="order-button">Beställ</button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
-    <script src="java/app.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>

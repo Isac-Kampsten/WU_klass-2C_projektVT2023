@@ -381,6 +381,7 @@ nav a:hover{
     border-color: black;
 }
 
+
 #Flavor1:hover{
     -webkit-transform: scale(1.15);
     -ms-transform: scale(1.15);
@@ -464,6 +465,7 @@ nav a:hover{
 #cart-icon{
     height: 45px;
     width: auto;
+    margin-left: 1rem;
     
 }
 
@@ -487,6 +489,32 @@ nav a:hover{
     opacity: 200%;
 }
 
+#openBasket{
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 15px;
+    border: 0;
+    color: #fff;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-color: #000;
+    color: #000;
+    background: transparent;
+    font-weight: 800;
+    line-height: 30px;
+    transition: background,color .2s ease-in-out;
+    width: 9rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+}
+
+#openBasket:hover{
+    background-color: #000;
+    color: #fff;
+    border-color: black;
+}
 
 /* Om oss */
 
@@ -563,10 +591,98 @@ nav a:hover{
     border-color: black;
 }
 
+.popup{
+    width: 40%;
+    height: 75%;
+    background-color: white;
+    box-shadow: 1px 7px 13px 5px rgba(0,0,0,0.25);
+    position: absolute;
+    border-radius: 8px;
+    top: -25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: .5s ease-in-out;
+    margin: -10rem;
+    scale: 0.55;
+    
+}
+
+#popup-left{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#popup-right{
+    display: flex;
+    align-items: center;
+}
+
+#popup-right input{
+    width: 15rem;
+    height: 2.5rem;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    
+}
+
+
+#buy-form button{
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 1% 2%;
+    border: 0;
+    color: #fff;
+    font-size: 2.5rem;
+    border: 2px solid transparent;
+    border-color: #000;
+    color: #000;
+    background: transparent;
+    font-weight: 800;
+    line-height: 120%;
+    transition: background,color .2s ease-in-out;
+    margin-left: 0%;
+    margin-bottom: 2%;
+    margin-top: 30%;
+    width: 15rem;
+    height: 5rem;
+
+}
+
+#buy-form button:hover{
+    background-color: #000;
+    color: #fff;
+    border-color: black;
+}
+
+#popup-right label{
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    
+}
+.popup span{
+    color: rgb(23, 23, 23);
+    font-weight: bolder;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;    
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
 @media screen and (max-width: 600px){
 
     #om-oss-section p{
         overflow-y: scroll;
+    }
+
+    .popup{
+        width: 85%;
+        height: 70%;
     }
 
 
@@ -668,4 +784,5 @@ nav a:hover{
         width: 200px;
         margin-left: 50px;
     }
+
 }
