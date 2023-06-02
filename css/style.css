@@ -29,16 +29,7 @@
         "shopSection";
 }
 
-#om-oss-container{
-    width: 100vw;
-    height: 100vh;
 
-    display: grid;
-    grid-template-rows: 11% 1fr;
-    grid-template-areas: 
-        "header"
-        "OmOss";
-}
 
 
 
@@ -519,10 +510,18 @@ nav a:hover{
 /* Om oss */
 
 #om-oss-container{
-    height: 100vh;
     width: 100vw;
-    overflow-x: hidden;
+    height: 200vh;
+
+    display: grid;
+    grid-template-rows: 6% 1fr 1fr;
+    grid-template-areas: 
+        "header"
+        "OmOss"
+        "omsection2";
 }
+
+
 
 #om-oss-section{
     grid-area: OmOss;
@@ -531,6 +530,121 @@ nav a:hover{
     justify-content: center;
     align-items: center;
     
+}
+
+#omOssSection2{
+
+    grid-area: omsection2;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(236, 236, 236);
+    justify-content: start;
+    align-items: center;
+
+    
+}
+
+#omOssSection2 h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-weight: bold;
+    color: rgb(7, 7, 7);;   
+    margin-top: 150px;
+    font-size: 4rem;
+
+}
+
+#omOssSection2 h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-weight: bold;
+    color: rgb(23, 23, 23);;   
+    margin-top: 50px;
+    font-size: 2rem;
+    padding-left: 120px;
+
+}
+
+#omOssSection2 p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-weight: bold;
+    color: rgb(23, 23, 23);  
+    margin-top: 50px;
+    font-size: 1.2rem;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+
+#subHeadings {
+    margin-top: 25px;
+    width: 650px;
+}
+
+#subHeadings ul{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-weight: bold;
+    color: rgb(60, 60, 60);   
+    margin-top: 20px;
+    font-size: 1.5rem;
+    padding-left: 5%;
+    
+}
+
+#subHeadings ul li{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.line{
+    margin-top: 4px;
+    margin-left: 8px;
+    height: 5px;
+    width: 33rem; 
+    left: 50%; 
+    transform: translate(-50%, 0); 
+    position: absolute;
+    background-color: red;
+    border-radius: 5px;
+
+}
+
+#listAndButtonContainer{
+    display: flex;
+    
+}
+
+#nutritionLabelButton{
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+    border-color: #000;
+    color: #000;
+    background: transparent;
+    font-weight: 800;
+    line-height: 120%;
+    transition: background,color .2s ease-in-out;
+    height: 4rem;
+    width: 20rem;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+#nutritionLabelButton:hover{
+    background-color: #000;
+    color: #fff;
+    border-color: black;
+}
+
+#omOssParalaxCan{
+    position: absolute;
+    width: 500px;
+    left: -300px;
+    transition: 0.5s cubic-bezier(0.280, 0.840, 0.420, 1);
+    top: 56.5rem;
 }
 
 #om-oss-card{
@@ -675,6 +789,10 @@ nav a:hover{
 }
 
 @media screen and (max-width: 600px){
+
+    #openBasket{
+        font-size: 0.8rem;
+    }
 
     #om-oss-section p{
         overflow-y: scroll;

@@ -3,8 +3,19 @@ console.log(buttons)
 const popupButton = document.getElementById("order-button")
 const checkoutPopup = document.getElementById("checkoutPopup")
 const openBasketButton = document.getElementById("openBasket")
+const leftScrollCan = document.getElementById("omOssParalaxCan")
 
+window.addEventListener('scroll', function(){
+    console.log("scrolled")
+    let value = window.scrollY
 
+    if (value < 900){
+        leftScrollCan.style.left = value -700 + 'px'
+    }
+     
+ 
+  
+})
 
 function incrementCartNumber(cartNumber){
     var cartNumber = document.getElementById("cart-value");
@@ -32,3 +43,4 @@ for (let index = 0; index < buttons.length; index++) {
 
 popupButton.addEventListener("click", function(){closePopup(checkoutPopup);});
 openBasketButton.addEventListener("click", function(){openPopup(checkoutPopup);});
+
